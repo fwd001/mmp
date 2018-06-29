@@ -5,44 +5,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>分类页</title>
-  <link rel="stylesheet" href="css/category.css">
+  <title>优惠劵</title>
+  <link rel="stylesheet" href="css/coupon.css">
   <link rel="stylesheet" href="fonts/iconfont.css">
 </head>
 
 <body>
 
   <div class="container">
-
     <!-- 头部 -->
     <header id="top" class="mmp_header clearfix">
-      <a href="index.html" class="fl">
-        <img src="images/header_logo.png" alt="">
+      <a href="javascript: history.go(-1)" class="fl">
+        <span class="iconfont icon-fanhui"></span>
       </a>
       <div class="fr">
         <img src="images/header_app.png" alt="">
       </div>
+      <h3>
+        国内折扣
+      </h3>
     </header>
 
-    <!-- 搜索框 -->
-    <div class="mmp_search clearfix">
-      <input type="search" name="" id="" placeholder="请输入你想比价的商品">
-      <button>搜索</button>
-    </div>
+    <!-- 中间内容区 -->
 
-    <!-- 分类列表 -->
-    <div class="category">
-      <ul class="category_title">
-        <!-- 占个坑 -->
+    <ul class="mmp_coupon">
+      <!-- 坑 -->
+    </ul>
+
+
+    <!-- 面包屑导航 -->
+    <div class="mmp_nav clearfix">
+      <ul class="crumbs fl clearfix">
+        <li>
+          <a href="index.html">首页 ></a>
+        </li>
+        <li>
+          <a href="coupon.html">优惠券 ></a>
+        </li>
+
       </ul>
     </div>
 
+
+
     <!-- 尾部 -->
     <footer class="footer">
-      <div class="pinpai clearfix">
-        <span class="fl">品牌排行</span>
-        <img class="fr" src="images/more.png" alt="">
-      </div>
 
       <ul class="f_tips clearfix">
         <li>登录</li>
@@ -65,37 +72,31 @@
   <!-- 模板一 -->
   <script type="text/html" id="tpl">
     {{each result v i}}
-
-    <li data-id="{{v.titleId}}">
-      <a class='tap' href="javascript:;">
-        {{v.title}}
+    <li>
+      <a href="{{v.couponLink}}?couponid={{v.couponId}}">
+        <img src="{{v.couponImg}}" alt="">
+        <p>{{v.couponTitle}}</p>
       </a>
-      <ul class="category-content clearfix">
-
-      </ul>
     </li>
     {{/each}}
   </script>
 
   <!-- 模板二 -->
   <script type="text/html" id="tpl2">
-    {{each result v i}}
-    <li data-id='{{v.categoryId}}'>
-      <a href="productlist.html?categoryid={{v.categoryId}}&category={{v.category}}&pageid=1">
-        {{v.category}}
-      </a>
-    </li>
-    {{/each}}
+
   </script>
 
   <script src="lib/flexible/flexible.js"></script>
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/artTemplate/template-web.js"></script>
   <script src="js/common/Route.js"></script>
-  <script src="js/category.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/common.js"></script>
+
+  <script src="js/coupon.js"></script>
 
   <script>
-    
+    // $(this).next
   </script>
 </body>
 

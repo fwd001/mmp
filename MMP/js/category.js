@@ -7,7 +7,7 @@ $(function () {
     arr.forEach(function(e){ 
       
       Route.getcategory(e.titleId,function (info2) {
-        console.log(info2)
+        // console.log(info2)
         $('.category .category-content').each(function(i) { 
           if (i == info2.result[0].titleId){
             $(this).html(template('tpl2', info2))

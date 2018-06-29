@@ -4,7 +4,7 @@ $(function () {
   var pageid = param.pageid;
   console.log(pageid);
 
-  
+
   var totalCount = 0;
   var pagesize = 0;
 
@@ -25,19 +25,26 @@ $(function () {
     }
     page();
   })
-
-  // 注册selected改变时间
-  $('#selectPage').on('change', function() {
-    param.pageid = $(this).val();
-    page();
-  })
-
   $('.page span:last').on('click', function (e) {
     param.pageid++;
     if (param.pageid >= Math.ceil(totalCount / pagesize)) {
       param.pageid = Math.ceil(totalCount / pagesize);
     }
     page();
+  })
+
+  // 注册selected改变时间
+  $('#selectPage').on('change', function () {
+    param.pageid = $(this).val();
+    page();
+  })
+
+
+  // 给你注册点击事件
+  $('.mmp_product').on('click', 'li[data-id]', function () {
+    var productid = $(this).data('id')
+    var brandName = $(this).data('name')
+    location.href = 'bijia.html?productid=' + productid + '&brandName='+ brandName;
   })
 
   function page() {
@@ -53,7 +60,6 @@ $(function () {
     $(this).find('a').attr('href', 'productlist.html?' + url)
 
   }
-
 
   // 渲染函数
   function render(categoryid, pageid) {
@@ -74,16 +80,4 @@ $(function () {
     })
   }
 
-
-
-  function getSearch() {
-    var txt = location.search.slice(1).split('&');
-    var obj = {};
-    txt.forEach(function (e, i) {
-      var key = e.split('=')[0];
-      var value = e.split('=')[1];
-      obj[key] = value
-    })
-    return obj
-  }
 })

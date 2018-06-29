@@ -3,6 +3,16 @@
 @import 'normalize';
 @import 'base';
 
+
+h1,h2,h3,h4,h5,h6 { 
+  font-size:100%; 
+  font-weight:normal; 
+}
+
+i,b,em {
+  font-style: normal;
+}
+
 .container {
   // width: 100%;
   // max-width: 750px;
@@ -105,5 +115,56 @@
   }
 }
 
+// 面包屑导航
+.mmp_nav {
+  padding: 0 .266667rem /* 20/75 */;
+  background-image: linear-gradient(#fff, #ddd);
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  li {
+    float: left;
+    font-size: .4rem /* 30/75 */;
+    line-height: 1.013333rem /* 76/75 */
+  }
 
+  button {
+    padding: .093333rem /* 7/75 */ .4rem /* 30/75 */;
+    font-size: .373333rem /* 28/75 */;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-image: linear-gradient(#ddd, #fff);
+    position: absolute;
+    top: 50%;
+    right: .266667rem /* 20/75 */;
+    transform: translateY(-50%);
+  }
+}
+
+// page
+.page {
+  padding: .266667rem /* 20/75 */ 0;
+  span {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    display: block;
+    font-size: .32rem /* 24/75 */;
+    a {
+      width: 2.133333rem /* 160/75 */;
+      padding: .16rem /* 12/75 */ .4rem /* 30/75 */;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 0 auto;
+    }
+  }
+  select {
+    display: block;
+    width: 1.6rem /* 120/75 */;
+    height: 100%;
+    border: 1px solid #ccc;
+    padding: .16rem /* 12/75 */ .133333rem /* 10/75 */;
+    margin: 0 auto;
+  }
+}
 

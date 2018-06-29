@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>分类页</title>
-  <link rel="stylesheet" href="css/category.css">
+  <title>首页</title>
   <link rel="stylesheet" href="fonts/iconfont.css">
+  <link rel="stylesheet" href="css/brandTitle.css">
 </head>
 
 <body>
@@ -30,19 +30,36 @@
       <button>搜索</button>
     </div>
 
-    <!-- 分类列表 -->
+    <!-- 面包屑导航 -->
+    <div class="mmp_nav clearfix">
+      <ul class="crumbs fl clearfix">
+        <li>
+          <a href="index.html">首页 ></a>
+        </li>
+        <li>
+          <a href="category.html">全部分类 ></a>
+        </li>
+        <!-- <li>
+        <a class="categoryTxt" href="">
+          <span></span> ></a>
+      </li> -->
+      </ul>
+    </div>
+
+    <div class="title">
+      热门品牌排行
+    </div>
+
+    <!-- 品牌标题 -->
     <div class="category">
       <ul class="category_title">
         <!-- 占个坑 -->
       </ul>
     </div>
 
+
     <!-- 尾部 -->
     <footer class="footer">
-      <div class="pinpai clearfix">
-        <span class="fl">品牌排行</span>
-        <img class="fr" src="images/more.png" alt="">
-      </div>
 
       <ul class="f_tips clearfix">
         <li>登录</li>
@@ -65,38 +82,24 @@
   <!-- 模板一 -->
   <script type="text/html" id="tpl">
     {{each result v i}}
-
-    <li data-id="{{v.titleId}}">
-      <a class='tap' href="javascript:;">
-        {{v.title}}
+    <li data-id="{{v.brandTitleId}}">
+      <a class='tap' href="brand.html?brandtitleid={{v.brandTitleId}}&brandTitle={{v.brandTitle.replace('十大品牌', '')}}">
+        {{v.brandTitle}}
       </a>
-      <ul class="category-content clearfix">
-
-      </ul>
     </li>
     {{/each}}
   </script>
 
   <!-- 模板二 -->
   <script type="text/html" id="tpl2">
-    {{each result v i}}
-    <li data-id='{{v.categoryId}}'>
-      <a href="productlist.html?categoryid={{v.categoryId}}&category={{v.category}}&pageid=1">
-        {{v.category}}
-      </a>
-    </li>
-    {{/each}}
+    {{ each result v i }} {{ /each }}
   </script>
 
   <script src="lib/flexible/flexible.js"></script>
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/artTemplate/template-web.js"></script>
   <script src="js/common/Route.js"></script>
-  <script src="js/category.js"></script>
-
-  <script>
-    
-  </script>
+  <script src="js/brandTitle.js"></script>
 </body>
 
 </html>

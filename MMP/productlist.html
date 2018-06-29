@@ -95,7 +95,7 @@
   <!-- 模板一 -->
   <script type="text/html" id="tpl">
     {{each result v i}}
-    <li data-id="{{v.productId}}">
+    <li data-id="{{v.productId}}" data-name='{{v.brandName}}'>
       <a href="javascript:;" class="clearfix">
         <div class="img_box fl">
           {{@v.productImg}}
@@ -123,6 +123,8 @@
   <script src="lib/artTemplate/template-web.js"></script>
   <script src="js/common/Route.js"></script>
   <script src="js/common/Tools.js"></script>
+  <script src="js/common.js"></script>
+
   <script src="js/productlist.js"></script>
 
   <script>
