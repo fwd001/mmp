@@ -39,7 +39,7 @@
         <li>
           <a href="category.html">全部分类 ></a>
         </li>
-        <li>
+        <li class="now">
           <a class="categoryTxt" href=""><span></span> ></a>
         </li>
       </ul>
@@ -96,7 +96,7 @@
   <script type="text/html" id="tpl">
     {{each result v i}}
     <li data-id="{{v.productId}}" data-name='{{v.brandName}}'>
-      <a href="javascript:;" class="clearfix">
+      <a href="bijia.html?productid={{v.productId}}&brandName={{v.brandName}}&category={{category}}">
         <div class="img_box fl">
           {{@v.productImg}}
         </div>

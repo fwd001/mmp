@@ -10,16 +10,17 @@ $(function () {
     $('#wrapper li').each(function (i, e) {
       ulWidth += $(this).innerWidth();
     })
-    // console.log(ulWidth);
+    console.log(ulWidth);
 
-    $('#wrapper ul').width(ulWidth + 1);
+    // $('#wrapper ul').width(ulWidth + 1);
+    $('#wrapper ul').get(0).style.width = (ulWidth + 1)+ 'px';
 
     var myScroll = new IScroll('#wrapper', {
       scrollX: true,
       scrollY: false,
     });
   })
-  
+
   $('#wrapper ul').on('click', 'a', function (e) {
     render($(this).data('titleid'));
     $(this).addClass('now').parent().siblings().find('a').removeClass('now');

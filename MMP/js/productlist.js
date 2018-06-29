@@ -2,7 +2,8 @@ $(function () {
   var param = getSearch()
   var categoryid = param.categoryid;
   var pageid = param.pageid;
-  console.log(pageid);
+  var category = decodeURI(param.category);
+  console.log(category);
 
 
   var totalCount = 0;
@@ -67,6 +68,7 @@ $(function () {
       console.log(info);
       pagesize = info.pagesize;
       totalCount = info.totalCount;
+      info.category = category;
       $('.mmp_product').html(template('tpl', info))
 
       var count = Math.ceil(totalCount / pagesize);

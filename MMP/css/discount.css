@@ -236,11 +236,25 @@ button {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.text-rows {
+.text-rows-3 {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+i,
+b,
+em {
+  font-style: normal;
 }
 .container {
   margin: 0 auto;
@@ -348,6 +362,7 @@ button {
 }
 .mmp_nav button {
   padding: 0.093333rem /* 7/75 */ 0.4rem /* 30/75 */;
+  font-size: 0.373333rem /* 28/75 */;
   border-radius: 5px;
   border: 1px solid #ccc;
   background-image: linear-gradient(#ddd, #fff);
@@ -355,6 +370,9 @@ button {
   top: 50%;
   right: 0.266667rem /* 20/75 */;
   transform: translateY(-50%);
+}
+.crumbs li.now a {
+  color: #777;
 }
 .page {
   padding: 0.266667rem /* 20/75 */ 0;
@@ -433,8 +451,9 @@ button {
   width: 5.866667rem /* 440/75 */;
 }
 .golink {
-  padding: 0 0.266667rem /* 20/75 */;
+  padding: 0.266667rem /* 20/75 */ 0.266667rem /* 20/75 */;
   text-align: center;
+  background-color: #fff;
 }
 .golink a {
   background-color: orange;
@@ -469,6 +488,7 @@ button {
 }
 .mmp_message {
   padding: 0.266667rem /* 20/75 */;
+  background-color: #fff;
 }
 .mmp_message .tit {
   font-size: 0.426667rem /* 32/75 */;
@@ -504,7 +524,8 @@ button {
 }
 .mmp_message .list li {
   position: relative;
-  margin-bottom: 0.133333rem /* 10/75 */;
+  padding: 0.133333rem /* 10/75 */ 0;
+  border-bottom: 1px solid #ccc;
 }
 .mmp_message .list li .name {
   margin-bottom: 0.16rem /* 12/75 */;
@@ -533,4 +554,8 @@ button {
   height: 1.106667rem /* 83/75 */;
   border-radius: 50%;
   margin-right: 0.266667rem /* 20/75 */;
+}
+.box_img {
+  padding: 0.666667rem /* 50/75 */ 0.266667rem /* 20/75 */;
+  background-color: #fff;
 }

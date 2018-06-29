@@ -371,6 +371,9 @@ em {
   right: 0.266667rem /* 20/75 */;
   transform: translateY(-50%);
 }
+.crumbs li.now a {
+  color: #777;
+}
 .page {
   padding: 0.266667rem /* 20/75 */ 0;
 }

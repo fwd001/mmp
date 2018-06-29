@@ -362,6 +362,7 @@ em {
 }
 .mmp_nav button {
   padding: 0.093333rem /* 7/75 */ 0.4rem /* 30/75 */;
+  font-size: 0.373333rem /* 28/75 */;
   border-radius: 5px;
   border: 1px solid #ccc;
   background-image: linear-gradient(#ddd, #fff);
@@ -369,6 +370,9 @@ em {
   top: 50%;
   right: 0.266667rem /* 20/75 */;
   transform: translateY(-50%);
+}
+.crumbs li.now a {
+  color: #777;
 }
 .page {
   padding: 0.266667rem /* 20/75 */ 0;

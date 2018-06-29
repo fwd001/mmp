@@ -1,8 +1,12 @@
 $(function () {
   var param = getSearch() 
   var name = decodeURI(param.brandName);
+  var category = decodeURI(param.category);
+  console.log(category);
+  
   // console.log(name);
   $('.categoryTxt span').text(name);
+  $('.pz span').text(category);
 
   Route.getproduct(param.productid, function (info) {
     console.log(info);

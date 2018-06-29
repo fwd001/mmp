@@ -62,8 +62,9 @@
   }
 }
 .golink {
-  padding: 0 .266667rem /* 20/75 */;
+  padding: .266667rem /* 20/75 */ .266667rem /* 20/75 */;
   text-align: center;
+  background-color: #fff;
   // background-color: #fff;
   a {
     background-color: orange;
@@ -101,6 +102,7 @@
 
 .mmp_message {
   padding: .266667rem /* 20/75 */;
+  background-color: #fff;
   .tit {
     font-size: .426667rem /* 32/75 */;
     line-height: .8rem /* 60/75 */;
@@ -136,7 +138,9 @@
   .list {
     li {
       position: relative;
-      margin-bottom: .133333rem /* 10/75 */;
+      padding: .133333rem /* 10/75 */ 0;
+      border-bottom: 1px solid #ccc;
+
       .name {
         margin-bottom: .16rem /* 12/75 */;
       }
@@ -168,4 +172,9 @@
       }
     }
   }
+}
+
+.box_img {
+  padding: .666667rem /* 50/75 */ .266667rem /* 20/75 */ ;
+  background-color: #fff;
 }

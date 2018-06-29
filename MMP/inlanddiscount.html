@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>国内折扣</title>
+  <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+  <!-- <link rel="stylesheet" href="fonts/iconfont.css"> -->
   <link rel="stylesheet" href="css/inlanddiscount.css">
-  <link rel="stylesheet" href="fonts/iconfont.css">
 </head>
 
 <body>
 
-  <h3 class="container">
+  <div class="container">
     <!-- 头部 -->
     <header id="top" class="mmp_header clearfix">
       <a href="javascript: history.go(-1)" class="fl">
@@ -25,12 +26,11 @@
         国内折扣
       </h3>
     </header>
-
-    <!-- 中间部分 -->
+    
     <ul class="inladdiscount clearfix">
 
     </ul>
-
+    <p class="tips">加载中...</p>
 
     <!-- 尾部 -->
     <footer class="footer">
@@ -55,41 +55,43 @@
       </p>
       <p>m.manmanbuy.com</p>
     </footer>
-    </div>
 
-    <!-- 模板一 -->
-    <script type="text/html" id="tpl">
-      {{each result v i}}
-      <li>
-        <a href="discount.html?productid={{v.productId}}">
-          {{@v.productImg}}
-          <h4 class="text-rows-2">{{v.productName}}</h4>
-          <div class="subtit">{{v.productPrice}}</div>
-          <div class="info">
-            <div class="mall">{{v.productFrom}} | {{v.productTime}}</div>
-          </div>
-        </a>
-      </li>
-      {{/each}}
-    </script>
+  </div>
 
-    <!-- 模板二 -->
-    <script type="text/html" id="tpl2">
+  <!-- 模板一 -->
+  <script type="text/html" id="tpl">
+    {{each result v i}}
+    <li>
+      <a href="discount.html?productid={{v.productId}}">
+        {{@v.productImg}}
+        <h4 class="text-rows-2">{{v.productName}}</h4>
+        <div class="subtit mui-ellipsis">{{v.productPrice}}</div>
+        <div class="info">
+          <div class="mall">{{v.productFrom}} | {{v.productTime}}</div>
+        </div>
+      </a>
+    </li>
+    {{/each}}
+  </script>
 
-    </script>
+  <!-- 模板二 -->
+  <script type="text/html" id="tpl2">
 
-    <script src="lib/flexible/flexible.js"></script>
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/artTemplate/template-web.js"></script>
-    <script src="js/common/Route.js"></script>
-    <script src="js/common/Tools.js"></script>
-    <script src="js/common.js"></script>
+  </script>
 
-    <script src="js/inlanddiscount.js"></script>
+  <script src="lib/flexible/flexible.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <!-- <script src="lib/mui/js/mui.js"></script> -->
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/common.js"></script>
 
-    <script>
-      // $(this).next
-    </script>
+  <script src="js/inlanddiscount.js"></script>
+
+  <script>
+    // $(this).next
+  </script>
 </body>
 
 </html>
